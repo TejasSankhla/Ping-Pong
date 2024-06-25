@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const paddle = document.getElementById("paddle");
   const ball = document.getElementById("ball");
   const table = document.getElementById("table");
+  const scoreValue=document.getElementById('score-value');
   // paddle position
   let py = 0;
   const pdy = 30;
@@ -13,7 +14,8 @@ document.addEventListener("DOMContentLoaded", () => {
     bx = 50;
   let bdx = 2,
     bdy = 2;
-
+  // score
+  var score = 0;
   setInterval(() => {
     // All logic here
     // making ball move
@@ -29,8 +31,11 @@ document.addEventListener("DOMContentLoaded", () => {
       bx <= paddle.offsetLeft + paddle.offsetWidth &&
       by + ball.offsetHeight < paddle.offsetTop + paddle.offsetHeight &&
       by > paddle.offsetTop
-    )
+    ) {
       bdx *= -1;
+      score++;
+        scoreValue.innerText=score;
+    }
   }, 5);
 
   // controlling paddle

@@ -14,12 +14,27 @@ html {
   letter-spacing: 0.25rem;
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
 }
+.score {
+  text-align: center;
+  margin: 3rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  letter-spacing: 0.15rem;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+#score-value {
+  font-size: 2rem;
+  padding-left: 0.5rem;
+}
 #table {
   border: 2px solid black;
   max-width: 700px;
   min-height: 400px;
   margin: auto;
   position: relative;
+  background-color: rgb(47, 57, 37);
 }
 #paddle {
   height: 100px;
